@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css" />
+  </head>
+  <body id="exercicio">
+    <main class="coluna">
+      <label for="compras">Compras</label>
+      <ul id="compras" destino="escritório" data-urgencia="5">
+        <li>Café</li>
+        <li>Agua</li>
+        <li>Copo Descartavél</li>
+        <li>Leite</li>
+      </ul>
+    </main>
+    <script>
+      const lista = document.querySelector('main ul[destino="escritório"]')
+      console.log('childNodes', lista.childNodes)
+      console.log('destino', lista.destino)
+      console.log('destino', lista.getAttribute('destino'))
+      console.log('destino', lista.hasAttribute('destino'))
+      lista.setAttribute('destino', 'empresa')
+      lista.removeAttribute('destino')
+
+      console.log(lista.dataset.urgencia)
+      lista.dataset.urgencia = 9
+
+      console.log('data-urgencia', lista.getAttribute('get-urgencia'))
+
+      //cuidado!!
+
+      const label = document.querySelector('label')
+      console.log('for #1', label.htmlFor)
+      console.log('for #2', label.getAttribute('for'))
+    </script>
+  </body>
+</html>
