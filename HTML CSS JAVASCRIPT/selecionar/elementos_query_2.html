@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css" />
+  </head>
+  <body id="exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div id="segundo" class="destaque">#segundo</div>
+    <div id="terceiro">#terceiro</div>
+    <div id="quarto" class="destaque">#quarto</div>
+    <div id="quinto" class="ultimo">#quinto</div>
+
+    <script>
+      function selecionarTodos(seletor) {
+        return document.querySelectorAll('.destaque ')
+      }
+      selecionarTodos('#primeiro').forEach(el => console.log(el))
+    </script>
+  </body>
+</html>

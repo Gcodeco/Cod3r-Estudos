@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css" />
+  </head>
+  <body id="exercicio">
+    <main>
+      <section>
+        <p>Liosta de Aprovados...</p>
+        <ul>
+          <li>Ana</li>
+          <li>Gustavo</li>
+          <li>Pedro</li>
+          <li>Anny</li>
+        </ul>
+        <p>ista de Reprovados...</p>
+        <ul>
+          <li>Maria</li>
+          <li>iza</li>
+          <li>Andreia</li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      const primeiros = document.querySelectorAll(' main > section li:nth-child(1) ')
+      primeiros.forEach(no => (no.textContent = `>>>${no.textContent}<<<`))
+
+      const itens = document.querySelectorAll('main > section li')
+      const ultimoItem = itens[itens.length - 1]
+      const listaDeReprovados = ultimoItem.parentNode
+      const primeiroItem = listaDeReprovados.firstElementChild
+      console.log(ultimoItem.parentNode.childNodes)
+      console.log(listaDeReprovados.firstElementChild)
+      console.log(listaDeReprovados.lastElementChild)
+
+      console.log(primeiroItem.nextElementSibling)
+    </script>
+  </body>
+</html>
