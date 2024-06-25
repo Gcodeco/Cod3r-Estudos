@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/estilo.css" />
+  </head>
+  <body id="exercicio">
+    <div>
+      <a esperar="6" href="http://google.com.br">Google</a>
+    </div>
+    <div>
+      <a espera="3" href="http://yahoo.com.br">yahoo</a>
+    </div>
+
+    <script>
+      function navegarEm5s(evento) {
+        evento.preventDefault()
+
+        const link = evento.target
+        const segundos = link.getAttribute('esperar')
+
+        setTimeout(() => {
+          window.location.href = link.href
+        }, segundos * 1000)
+      }
+
+      const linksParaEsperar = document.querySelectorAll('a[esperar]')
+      linksParaEsperar.forEach(link => (link.onclick = navegarEm5s))
+    </script>
+  </body>
+</html>
